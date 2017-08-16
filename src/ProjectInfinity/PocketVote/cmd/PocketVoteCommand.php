@@ -20,7 +20,7 @@ class PocketVoteCommand extends Command implements PluginIdentifiableCommand {
         $this->plugin = $plugin;
     }
 
-    public function execute(CommandSender $sender, string $commandLabel, array $args) {
+    public function execute(CommandSender $sender, $commandLabel, array $args) {
         if(!$sender->hasPermission('pocketvote.admin')) {
             $sender->sendMessage(TextFormat::RED.'You do not have permission to administer PocketVote.');
             return true;
